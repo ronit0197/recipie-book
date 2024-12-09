@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Playwrite+HR+Lijeva:wght@100..400&display=swap');
+
+$dark: #2A3335;
+$transparent: #ffffff00;
+$transparent-dark: rgba(0, 0, 0, 0.292);
+$light: #ffffffa3;
+$white: whitesmoke;
+$card-title: #ff5722;
+
+.custom-navbar {
+    background-color: $transparent;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &.scrolled {
+        background-color: $light;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar-brand {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+
+    .login-btn {
+        height: 30px;
+        width: 30px;
+        background: $white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $dark;
+    }
+}
+
+.header {
+    background-image: url("../../public/images/banner/banner1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .header-cover {
+        background: $transparent-dark;
+        backdrop-filter: blur(2px);
+
+        .header-text {
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 80px;
+
+            @media (max-width: 991px) {
+                font-size: 50px; // Reduce font size for smaller screens
+            }
+        }
+
+        .header-sub-text {
+            font-family: "Playwrite HR Lijeva", cursive;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .custom-btn {
+            background-image: linear-gradient($card-title, #e64a19);
+            border: 0;
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+            transition: 0.3s ease all;
+
+            &:hover {
+                background-image: linear-gradient(#e64a19, $card-title);
+            }
+        }
+    }
+
+}
+
+.recipie-header {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .header-cover {
+        background: $transparent-dark;
+        backdrop-filter: blur(2px);
+
+        .header-sub-text {
+            font-family: "Playwrite HR Lijeva", cursive;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+        }
+    }
+}
+
+.cardWrapper {
+    perspective: 1000px;
+}
+
+.recipeCard {
+    transform-style: preserve-3d;
+    transition: transform 0.5s, box-shadow 0.3s;
+
+    &:hover {
+        transform: rotateY(10deg) scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .cardImage {
+        border-radius: 8px 8px 0 0;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .cardTitle {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        color: $card-title;
+        font-size: 12px;
+    }
+
+    .cardText {
+        font-family: "Roboto", sans-serif;
+        color: #666;
+        font-size: 0.7rem;
+    }
+
+    .cardButton {
+        background-color: $card-title;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #e64a19;
+        }
+    }
+}
+
+.animated {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.home {
+
+    .load-more {
+        background-color: $card-title;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #e64a19;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
