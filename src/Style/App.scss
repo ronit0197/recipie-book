@@ -18,10 +18,9 @@ $card-title: #ff5722;
     }
 
     .navbar-brand {
-        font-family: "Dancing Script", cursive;
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
+        .logo {
+            width: 50px;
+        }
     }
 
 

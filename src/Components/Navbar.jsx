@@ -28,7 +28,7 @@ const ResponsiveNavbar = () => {
         <Navbar className={`custom-navbar ${isScrolled ? 'scrolled' : ''}`} expand="lg" fixed="top">
             <Container fluid>
                 <Navbar.Brand className="text-white fw-bold navbar-brand" as={Link} to="/">
-                    Recipie-Book
+                    <img className='logo' src="/images/logo/logo.png" alt="Logo" />
                 </Navbar.Brand>
                 <Link to={isSearchPage ? "/" : `/search/${searchTerm}`} className="login-btn">
                     {isSearchPage ? <Icon.House size={15} /> : <Icon.Search size={15} />}
